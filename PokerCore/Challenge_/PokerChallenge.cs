@@ -4,12 +4,13 @@ using System.Text;
 
 namespace PokerCore
 {
-    class PokerChallange : IPokerChallange
+    class PokerChallenge : IPokerChallenge
     {
-        public IEnumerable<PokerPlayer> GetWinnersOfChallange(IEnumerable<PokerPlayer> players)
+        public IEnumerable<PokerPlayer> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players)
         {
             var detailGenerator = new PokerDetailGenerator();
             var details = detailGenerator.GetDetail(players);
+
         }
     }
 }

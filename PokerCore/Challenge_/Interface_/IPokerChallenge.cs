@@ -2,13 +2,13 @@
 
 namespace PokerCore
 {
-    interface IPokerChallange
+    interface IPokerChallenge
     {
         /// <summary>
         /// Get the correct winner list of the challange
         /// </summary>
         /// <param name="players">The players' information</param>
         /// <returns> The winners </returns>
-        IEnumerable<PokerPlayer> GetWinnersOfChallange(IEnumerable<PokerPlayer> players);
+        IEnumerable<PokerPlayer> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players);
     }
 }
