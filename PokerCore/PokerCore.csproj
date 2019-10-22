@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Challenge_\" />
+    <Folder Include="Compare_\" />
     <Folder Include="Extension_\" />
   </ItemGroup>
 

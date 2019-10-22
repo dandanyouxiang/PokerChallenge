@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace PokerCore
 {
-    class PokerDetail
+    class PokerDetailInformation : PokerDetail
     {
         /// <summary>
         /// The poker hand of a group of poker cards
@@ -10,8 +12,8 @@ namespace PokerCore
         public PokerHands PokerHand { get; set; }
 
         /// <summary>
-        /// The number of each rank
+        /// Name of player
         /// </summary>
-        public Dictionary<int, int> CardDetail { get; set; }
+        public string Name { get; set; }
     }
 }
