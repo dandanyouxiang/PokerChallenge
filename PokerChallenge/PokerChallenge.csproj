@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PokerCoreTest\PokerTest.csproj" />
+    <ProjectReference Include="..\PokerCore\PokerCore.csproj" />
+    <ProjectReference Include="..\PokerCovert\PokerCovert.csproj" />
+  </ItemGroup>
+
 </Project>

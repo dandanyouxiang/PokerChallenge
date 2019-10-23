@@ -1,6 +1,6 @@
 ﻿namespace PokerCore
 {
-    enum PokerSuits
+    public enum PokerSuits
     {
         Heart,
         Spade,

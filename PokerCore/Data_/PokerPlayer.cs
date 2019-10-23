@@ -2,7 +2,7 @@
 
 namespace PokerCore
 {
-    class PokerPlayer
+    public class PokerPlayer
     {
         /// <summary>
         /// The name of this play

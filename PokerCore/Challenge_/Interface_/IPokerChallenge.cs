@@ -2,7 +2,7 @@
 
 namespace PokerCore
 {
-    interface IPokerChallenge
+    public interface IPokerChallenge
     {
         /// <summary>
         /// Get the correct winner list of the challange

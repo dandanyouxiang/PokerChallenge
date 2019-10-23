@@ -1,6 +1,6 @@
 ﻿namespace PokerCore
 {
-    class PokerCard
+    public class PokerCard
     {
         /// <summary>
         /// The suit of the poker card

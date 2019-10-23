@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace PokerCore
 {
-    class PokerChallenge : IPokerChallenge
+    public class PokerChallenge : IPokerChallenge
     {
         public List<string> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players)
         {
