@@ -9,6 +9,6 @@ namespace PokerCore
         /// </summary>
         /// <param name="players">The players' information</param>
         /// <returns> The winners </returns>
-        IEnumerable<PokerPlayer> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players);
+        List<string> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players);
     }
 }

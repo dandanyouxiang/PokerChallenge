@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace PokerCore
 {
     class PokerChallenge : IPokerChallenge
     {
-        public IEnumerable<PokerPlayer> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players)
+        public List<string> GetWinnersOfChallenge(IEnumerable<PokerPlayer> players)
         {
             // value validate
             if (players == null) throw new ArgumentNullException(nameof(players));
@@ -16,11 +17,14 @@ namespace PokerCore
             var details = detailGenerator.GetDetail(players);
             // get the poker hand type
             details = GetPokerHandInformation(details);
+            var pokerCompare = new PokerCompare();
+            var winnerDetail = pokerCompare.GetWinners(details);
+            return winnerDetail.Select(x => x.Name).ToList();
         }
 
         private IEnumerable<PokerDetailInformation> GetPokerHandInformation(IEnumerable<PokerDetailInformation> details)
         {
-            var pokerHandGenerator = new PokerHandGenerator();
+            IPokerHandGenerator pokerHandGenerator = new PokerHandGenerator();
             foreach (var detail in details)
             {
                 detail.PokerHand = pokerHandGenerator.GetPokerHands(detail);
