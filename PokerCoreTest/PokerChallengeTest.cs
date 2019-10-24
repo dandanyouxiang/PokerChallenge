@@ -18,7 +18,6 @@ namespace PokerTest
                 Assert.IsTrue(result[0] == "Bob");
             });
 
-
             "Data string to players challenge result test".Test(() =>
             {
                 var players = PokerConvertTest.ConvertToPlayer(TestData.DataString1);
@@ -49,6 +48,51 @@ namespace PokerTest
                 var result = GetChallengeResult(players);
                 Assert.IsTrue(result.Count == 1);
                 Assert.IsTrue(result[0] == "Jen");
+            });
+        }
+
+        [ContractTestCase]
+        public void SpecialDataTest()
+        {
+            "Flush Data Test".Test(() =>
+            {
+                var players = PokerConvertTest.ConvertToPlayer(TestData.FlushDataTest);
+                var result = GetChallengeResult(players);
+                Assert.IsTrue(result.Count == 1);
+                Assert.IsTrue(result[0] == "Joe");
+            });
+
+            "Three of a kind Data Test".Test(() =>
+            {
+                var players = PokerConvertTest.ConvertToPlayer(TestData.ThreeOfAKindTest);
+                var result = GetChallengeResult(players);
+                Assert.IsTrue(result.Count == 1);
+                Assert.IsTrue(result[0] == "Bob");
+            });
+
+            "One pair Data Test".Test(() =>
+            {
+                var players = PokerConvertTest.ConvertToPlayer(TestData.OnePairDataTest);
+                var result = GetChallengeResult(players);
+                Assert.IsTrue(result.Count == 1);
+                Assert.IsTrue(result[0] == "Bob");
+            });
+
+            "High card Data Test".Test(() =>
+            {
+                var players = PokerConvertTest.ConvertToPlayer(TestData.HighCarDataTest);
+                var result = GetChallengeResult(players);
+                Assert.IsTrue(result.Count == 1);
+                Assert.IsTrue(result[0] == "Jen");
+            });
+
+            "Multiple winners Data Test".Test(() =>
+            {
+                var players = PokerConvertTest.ConvertToPlayer(TestData.MultiValueTest);
+                var result = GetChallengeResult(players);
+                Assert.IsTrue(result.Count == 2);
+                Assert.IsTrue(result.Contains("Joe"));
+                Assert.IsTrue(result.Contains("Bob"));
             });
         }
 

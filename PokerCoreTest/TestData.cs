@@ -47,6 +47,73 @@ namespace PokerTest
             "2C,4 D,5s,10c,jh"
         };
 
+        /// <summary>
+        /// winner is Joe
+        /// </summary>
+        public static string[] FlushDataTest = new[]
+        {
+            "Joe",
+            "as,ks,qs,js,10s",
+            "Bob",
+            "2s,3s,4s,5s,6s",
+            "Jen",
+            "4h,4c,4s,3d,2d",
+            "Sally",
+            "5c,6c,7c,8c,9c"
+        };
+
+        /// <summary>
+        /// winner is Bob
+        /// </summary>
+        public static string[] ThreeOfAKindTest = new[]
+        {
+            "Joe",
+            "4s,5s,6s,4c,4d",
+            "Bob",
+            "4s,4c,4d,js,qs",
+            "Jen",
+            "3s,3c,2d,3d,js"
+        };
+
+        /// <summary>
+        /// winner is Bob
+        /// </summary>
+        public static string[] OnePairDataTest = new[]
+        {
+            "Joe",
+            "2S,2D,3s,4s,5s",
+            "Bob",
+            "2c,2h,6s,7s,8s",
+            "Jen",
+            "as,qs,3d,ks,js"
+        };
+
+        /// <summary>
+        /// winner is Jen 
+        /// </summary>
+        public static string[] HighCarDataTest = new[]
+        {
+            "Joe",
+            "AS,KD,3s,4s,5s",
+            "Bob",
+            "Ac,Kh,3s,4s,6s",
+            "Jen",
+            "Ac,kh,3s,4s,7s"
+        };
+
+        /// <summary>
+        /// winner is Joe and Bob
+        /// </summary>
+        public static string[] MultiValueTest = new[]
+        {
+            "Joe",
+            "2S,2D,3s,4s,5s",
+            "Bob",
+            "2S,2D,3s,4s,5s",
+            "Jen",
+            "as,qs,3d,ks,js"
+        };
+
         public static List<PokerPlayer> Data1 = new List<PokerPlayer>()
         {
             new PokerPlayer
